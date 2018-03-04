@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+.controls-group {
+  display: flex;
+
+  &__control {
+    flex: 1;
+    margin-bottom: 5px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
