@@ -3,6 +3,7 @@ import compose from 'recompose/compose';
 import mapProps from 'recompose/mapProps';
 import withProps from 'recompose/withProps';
 import lifecycle from 'recompose/lifecycle';
+import pure from 'recompose/pure';
 import { withRouter } from 'react-router-dom';
 
 import Graphics from '../Graphics';
@@ -120,5 +121,6 @@ export default compose(
         componentWillUnmount() {
             this._historyListenerDisposer();
         }
-    })
+    }),
+    pure
 )(Graphics)

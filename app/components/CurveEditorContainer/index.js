@@ -1,5 +1,6 @@
 import compose from 'recompose/compose';
 import withHandlers from 'recompose/withHandlers';
+import pure from 'recompose/pure';
 import set from 'lodash/set';
 
 import CurveEditor from '../CurveEditor';
@@ -16,5 +17,6 @@ export default compose(
         onLinePointsReset: props => () => {
             props.onLineReset(props.lineNumber);
         }
-    })
+    }),
+    pure
 )(CurveEditor)

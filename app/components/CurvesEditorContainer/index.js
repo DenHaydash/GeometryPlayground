@@ -4,6 +4,8 @@ import withState from 'recompose/withState';
 import withProps from 'recompose/withProps';
 import withHandlers from 'recompose/withHandlers';
 import mapProps from 'recompose/mapProps';
+import pure from 'recompose/pure';
+
 import CurvesEditor from "../CurvesEditor";
 
 export default compose(
@@ -26,5 +28,6 @@ export default compose(
         onLineSelect: props => e => {
             props.selectLine(+e.target.value);
         }
-    })
+    }),
+    pure
 )(CurvesEditor)

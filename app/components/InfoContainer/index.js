@@ -1,6 +1,7 @@
 import { observer, inject } from 'mobx-react';
 import compose from 'recompose/compose';
 import mapProps from 'recompose/mapProps';
+import pure from 'recompose/pure';
 
 import Info from '../Info';
 
@@ -23,5 +24,6 @@ export default compose(
         curveAngle: surfaceProjectionStore.angle,
 
         mode: modeStore.mode
-    }))
+    })),
+    pure
 )(Info)

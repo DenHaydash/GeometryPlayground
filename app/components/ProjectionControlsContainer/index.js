@@ -2,6 +2,7 @@ import { observer, inject } from 'mobx-react';
 import compose from 'recompose/compose';
 import withHandlers from 'recompose/withHandlers';
 import mapProps from 'recompose/mapProps';
+import pure from 'recompose/pure';
 
 import ProjectionControls from '../ProjectionControls';
 
@@ -44,7 +45,8 @@ const ProjectionControlsContainer =  compose(
 
             props.onProjectiveCoeffChange(e.target.name, +value);
         }
-    })
+    }),
+    pure
 )(ProjectionControls);
 
 export default ProjectionControlsContainer
